@@ -12,4 +12,3 @@ foreach (var movieStar in movieStars)
 {
     Console.WriteLine(movieStar.ToString());
 }
-

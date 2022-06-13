@@ -23,12 +23,12 @@ namespace Task1
 
         public string Nationality { get; set; }
 
-        public string FullName()
+        public string GetFullName()
         {
             return this.Name + " " + this.Surname;
         }
 
-        public int CurrentAge(DateTime dateOfBirth, DateTime todaysDate)
+        public int GetCurrentAge(DateTime dateOfBirth, DateTime todaysDate)
         {
             int age = todaysDate.Year - this.DateOfBirth.Year;
 
@@ -46,10 +46,10 @@ namespace Task1
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine(this.FullName())
+            sb.AppendLine(this.GetFullName())
                 .AppendLine(this.Sex)
                 .AppendLine(this.Nationality)
-                .AppendLine(this.CurrentAge(this.DateOfBirth, DateTime.Now).ToString() + " years old");
+                .AppendLine(this.GetCurrentAge(this.DateOfBirth, DateTime.Now).ToString() + " years old");
 
             return sb.ToString();
         }
