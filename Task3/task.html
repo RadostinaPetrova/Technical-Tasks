@@ -1,29 +1,10 @@
 <html>
     <head>
-        <script>
+        <script src="script.js">
+          // This way the function will work even from the browser console with -> solve('ul#bottomMenu')
+          
           document.addEventListener("DOMContentLoaded", function (event) {
-            let selector = document.querySelector("ul#bottomMenu");
-            let array = [];
-            
-            getAllDescendants(selector);
-            
-            function getAllDescendants(selector) {
-
-              exctractAllChildrenFromNode(selector);
-
-              function exctractAllChildrenFromNode(node) {             
-                for (let i = 0; i < node.childNodes.length; i++) {
-                    let child = node.childNodes[i];
-
-                    if (child.nodeType === document.ELEMENT_NODE) {
-                      exctractAllChildrenFromNode(child);
-                    }
-                }
-              
-               array.push(node.nodeName);
-            }
-          }               
-          console.log(array);
+            solve(inputSelector);
           });
         </script>
 </head>
